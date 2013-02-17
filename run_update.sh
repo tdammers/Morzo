@@ -1,2 +1,5 @@
-date >> /var/www/logs/update.log
-php -f /var/www/run_update.php >> /var/www/logs/update.log
+#!/usr/bin/env bash
+cd `dirname $0`
+LOGFILE=logs/update.log
+date >> "$LOGFILE"
+php -f ./run_update.php >> "$LOGFILE"
